@@ -1,0 +1,170 @@
+tables:
+  - name: blinkit_products
+    columns:
+      - product_id:
+        product_name:
+        category:
+        brand:
+        price:
+        mrp: material_requirements_planning
+        margin_percentage:
+        shelf_life_days:
+        min_stock_level:
+        max_stock_level:
+    transform_text:
+      - product_name: REGEXP_REPLACE({entity}, '[^a-zA-Z0-9 ]', '')
+        category: UPPER({entity})
+        brand: UPPER({entity})
+    transform_null_identity:
+      - product_name: Undefine
+    transform_null_val:
+      - category: MODE
+        brand: MODE
+        price: MODE
+        margin_percentage: MEDIAN
+        shelf_life_days: MEDIAN
+
+  - name: blinkit_orders
+    columns:
+      - order_id:
+        customer_id:
+        order_date:
+        promised_delivery_time:
+        actual_delivery_time:
+        delivery_status:
+        order_total:
+        payment_method:
+        delivery_partner_id:
+        store_id:
+    transform_text:
+      - delivery_status: UPPER({entity})
+        payment_method: UPPER({entity})
+    transform_null_identity:
+      - customer_id: 0
+        delivery_partner_id: 0
+        store_id: 0
+    transform_null_val:
+      - payment_method: MODE
+        delivery_status: MODE
+        order_total: MEDIAN
+
+
+  - name: blinkit_customer_feedback
+    columns:
+      - feedback_id:
+        order_id:
+        customer_id:
+        rating:
+        feedback_text:
+        feedback_category:
+        sentiment:
+        feedback_date:
+    transform_text:
+      - feedback_category: UPPER({entity})
+        sentiment: UPPER({entity})
+        feedback_text: REGEXP_REPLACE({entity}, '[^a-zA-Z0-9 ]', '')
+    transform_null_identity:
+      - order_id: 0
+        customer_id: 0
+    transform_null_val:
+      - feedback_category: MODE
+        sentiment: MODE
+        rating: MEAN
+
+  - name: blinkit_customers
+    columns:
+      - customer_id:
+        customer_name:
+        email:
+        phone:
+        address:
+        area:
+        pincode: pin_code
+        registration_date:
+        customer_segment:
+        total_orders:
+        avg_order_value:
+    transform_text:
+      - customer_segment: UPPER({entity})
+        address: REGEXP_REPLACE({entity}, '[^a-zA-Z0-9 ]', '')
+        customer_name: REGEXP_REPLACE({entity}, '[^a-zA-Z0-9 ]', '')
+        area: REGEXP_REPLACE({entity}, '[^a-zA-Z0-9 ]', '')
+    transform_null_identity:
+      - customer_name: Undefine
+        email: Undefine
+        address: Undefine
+        phone: Undefine
+        pin_code: 0
+    transform_null_val:
+      - total_orders: MEDIAN
+        avg_order_value: MEDIAN
+
+  - name: blinkit_delivery_performance
+    columns:
+      - order_id:
+        delivery_partner_id:
+        promised_time:
+        actual_time:
+        delivery_time_minutes: delivery_time_in_minutes
+        distance_km: distance_in_km
+        delivery_status:
+        reasons_if_delayed:
+    transform_text:
+      - delivery_status: UPPER({entity})
+        reasons_if_delayed: REGEXP_REPLACE({entity}, '[^a-zA-Z0-9 ]', '')
+    transform_null_identity:
+      - delivery_partner_id: 0
+    transform_null_val:
+      - delivery_status: MODE
+
+  - name: blinkit_inventory
+    columns:
+      - product_id:
+        date:
+        stock_received:
+        damaged_stock:
+    transform_null_val:
+      - stock_received: -1
+        damaged_stock: -1
+
+  - name: blinkit_inventoryNew
+    columns:
+      - product_id:
+        date:
+        stock_received:
+        damaged_stock:
+    transform_null_val:
+      - stock_received: -1
+        damaged_stock: -1
+
+  - name: blinkit_marketing_performance
+    columns:
+      - campaign_id:
+        campaign_name:
+        date:
+        target_audience:
+        channel:
+        impressions:
+        clicks:
+        conversions:
+        spend:
+        revenue_generated:
+        roas: return_on_ad_spend
+    transform_text:
+      - target_audience: UPPER({entity})
+        campaign_name: REGEXP_REPLACE({entity}, '[^a-zA-Z0-9 ]', '')
+    transform_null_identity:
+      - campaign_name: Undefine
+    transform_null_val:
+      - target_audience: MODE
+        channel: MODE
+
+  - name: blinkit_order_items
+    columns:
+      - order_id:
+        product_id:
+        quantity:
+        unit_price:
+    transform_null_val:
+      - quantity: MODE,product_id
+        unit_price: MODE,product_id

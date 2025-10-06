@@ -1,0 +1,10 @@
+JOB_NAME,TARGET_TABLE,P_KEY,STATUS,ACTIVE,START_TS,END_TS,ERROR_MESSAGE,LAST_UPDATED_TS,DATASOURCE_NUM,DATASOURCE_NAME
+blinkit_products,blinkit_products_cleaned,product_id,1,1,2025-10-06 22:10:02,2025-10-06 22:10:05,Có 268 dòng vi phạm logic min_stock_level <= max_stock_level khi cả hai không NULL.,10/5/2025 12:51,1,KAGGLE
+blinkit_orders,blinkit_orders_cleaned,order_id,1,1,2025-10-06 22:10:06,2025-10-06 22:10:07,,10/5/2025 12:51,1,KAGGLE
+blinkit_customer_feedback,blinkit_customer_feedback_cleaned,feedback_id,1,1,2025-10-06 22:12:55,2025-10-06 22:12:55,,10/5/2025 12:51,1,KAGGLE
+blinkit_customers,blinkit_customers_cleaned,customer_id,1,1,2025-10-05 23:04:38,2025-10-05 23:08:05,,10/5/2025 12:51,1,KAGGLE
+blinkit_delivery_performance,blinkit_delivery_performance_cleaned,order_id,1,1,2025-10-06 22:10:07,2025-10-06 22:10:07,,10/5/2025 12:51,1,KAGGLE
+blinkit_marketing_performance,blinkit_marketing_performance_cleaned,campaign_id,1,1,2025-10-06 22:10:07,2025-10-06 22:10:08,,10/5/2025 12:51,1,KAGGLE
+blinkit_order_items,blinkit_order_items_cleaned,order_id|product_id,1,1,2025-10-06 22:10:08,2025-10-06 22:10:08,,10/5/2025 12:51,1,KAGGLE
+blinkit_inventory,blinkit_inventory_cleaned,product_id|date_key,1,1,2025-10-06 22:12:42,2025-10-06 22:12:55,,10/5/2025 12:51,1,KAGGLE
+blinkit_inventoryNew,blinkit_inventoryNew_cleaned,product_id|date_key,1,1,2025-10-06 22:12:56,2025-10-06 22:12:59,Có 18105 dòng bị trùng khóa p_key:,10/5/2025 12:51,1,KAGGLE
