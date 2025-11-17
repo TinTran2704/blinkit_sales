@@ -1,0 +1,50 @@
+date,festival_name,ETL_updated_ts,ETL_DATASOURCE_NAME,date_key
+1-Jan,New Year's Day,27:07.6,2,0101
+9-Jan,Guru Govind Singh Jayanti,27:07.6,2,0109
+13-Jan,Lohri,27:07.6,2,0113
+14-Jan,Makar Sankranti/Pongal,27:07.6,2,0114
+26-Jan,Republic Day,27:07.6,2,0126
+5-Feb,Vasant Panchami,27:07.6,2,0205
+15-Feb,Hazarat Ali's Birthday,27:07.6,2,0215
+16-Feb,Guru Ravidas Jayanti,27:07.6,2,0216
+19-Feb,Shivaji Jayanti,27:07.6,2,0219
+26-Feb,Maharishi Dayanand Saraswati Jayanti,27:07.6,2,0226
+1-Mar,Maha Shivaratri/Shivaratri,27:07.6,2,0301
+17-Mar,Holika Dahana,27:07.6,2,0317
+18-Mar,Dolyatra/Holi,27:07.6,2,0318
+2-Apr,Chaitra Sukhladi/Gudi Padwa/Ugadi,27:07.6,2,0402
+10-Apr,Rama Navami,27:07.6,2,0410
+14-Apr,Ambedkar Jayanti/Mahavir Jayanti/Mesadi / Vaisakhadi/Vaisakhi,27:07.6,2,0414
+15-Apr,Good Friday,27:07.6,2,0415
+17-Apr,Easter Day,27:07.6,2,0417
+29-Apr,Jamat Ul-Vida,27:07.6,2,0429
+3-May,Ramzan Id/Eid-ul-Fitar,27:07.6,2,0503
+9-May,Birthday of Ravindranath,27:07.6,2,0509
+16-May,Buddha Purnima/Vesak,27:07.6,2,0516
+1-Jul,Rath Yatra,27:07.6,2,0701
+10-Jul,Bakr Id/Eid ul-Adha,27:07.6,2,0710
+8-Aug,Muharram/Ashura,27:07.6,2,0808
+11-Aug,Raksha Bandhan (Rakhi),27:07.6,2,0811
+15-Aug,Independence Day,27:07.6,2,0815
+16-Aug,Parsi New Year,27:07.6,2,0816
+18-Aug,Janmashtami (Smarta),27:07.6,2,0818
+19-Aug,Janmashtami,27:07.6,2,0819
+31-Aug,Ganesh Chaturthi/Vinayaka Chaturthi,27:07.6,2,0831
+8-Sep,Onam,27:07.6,2,0908
+26-Sep,First Day of Sharad Navratri,27:07.6,2,0926
+1-Oct,First Day of Durga Puja Festivities,27:07.6,2,1001
+2-Oct,Maha Saptami/Mahatma Gandhi Jayanti,27:07.6,2,1002
+3-Oct,Maha Ashtami,27:07.6,2,1003
+4-Oct,Maha Navami,27:07.6,2,1004
+5-Oct,Dussehra,27:07.6,2,1005
+9-Oct,Maharishi Valmiki Jayanti/Milad un-Nabi/Id-e-Milad,27:07.6,2,1009
+13-Oct,Karaka Chaturthi (Karva Chauth),27:07.6,2,1013
+24-Oct,Diwali/Deepavali/Naraka Chaturdasi,27:07.6,2,1024
+25-Oct,Govardhan Puja,27:07.6,2,1025
+26-Oct,Bhai Duj,27:07.6,2,1026
+30-Oct,Chhat Puja (Pratihar Sashthi/Surya Sashthi),27:07.6,2,1030
+8-Nov,Guru Nanak Jayanti,27:07.6,2,1108
+24-Nov,Guru Tegh Bahadur's Martyrdom Day,27:07.6,2,1124
+24-Dec,Christmas Eve,27:07.6,2,1224
+25-Dec,Christmas,27:07.6,2,1225
+29-Dec,Guru Govind Singh Jayanti,27:07.6,2,1229

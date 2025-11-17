@@ -168,3 +168,16 @@ tables:
     transform_null_val:
       - quantity: MODE,product_id
         unit_price: MODE,product_id
+
+  - name: general_india_special_date
+    columns:
+      - Date: date
+        "Festival name": festival_name
+
+  - name: general_india_pincode
+    columns:
+      - City: city
+        Area: area
+        Pincode: pincode
+        District: district
+        State: state

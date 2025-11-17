@@ -115,7 +115,13 @@ def apply_transform(df: pd.DataFrame, table_name: str, config: list) -> pd.DataF
     table_conf = next((t for t in config if t["name"] == table_name), None)
     if table_conf is None:
         raise ValueError(f"Không tìm thấy bảng '{table_name}' trong config YAML.")
-
+    
+    # --- rename column ---
+    # Loại bỏ các mapping có value rỗng ("", None)
+    valid_mapping = {old: new for old, new in table_conf.get("columns", []).items() if new}
+    # Rename
+    df = df.rename(columns=valid_mapping)
+    
     # --- transform_text ---
     for transform in table_conf.get("transform_text", []):
         for col, expr in transform.items():
